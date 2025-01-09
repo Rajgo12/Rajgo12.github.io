@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Explore PH Tours</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f9;
+            color: #333;
+        }
+        header {
+            background-color: #00796b;
+            color: white;
+            padding: 20px 10px;
+            text-align: center;
+            position: sticky;
+            top: 0;
+            z-index: 10;
+        }
+        header img {
+            height: 60px;
+        }
+        header h1 {
+            margin: 10px 0;
+            font-size: 1.8em;
+        }
+        nav {
+            background: #004d40;
+            display: flex;
+            justify-content: center;
+            padding: 10px;
+        }
+        nav a {
+            color: #fff;
+            text-decoration: none;
+            margin: 0 15px;
+            font-size: 1rem;
+            font-weight: bold;
+        }
+        nav a:hover {
+            color: #ffcc00;
+        }
+        .banner {
+            background: url('travel-banner-placeholder.jpg') no-repeat center center/cover;
+            height: 250px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            text-shadow: 1px 1px 5px #333;
+        }
+        .banner h2 {
+            font-size: 2em;
+            text-align: center;
+            padding: 0 20px;
+        }
+        .section {
+            padding: 30px 20px;
+            margin: 20px auto;
+            max-width: 1100px;
+            background: white;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        .section h2 {
+            text-align: center;
+            color: #00796b;
+            margin-bottom: 20px;
+        }
+        .services, .branches {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+        }
+        .services div, .branches div {
+            background: #f9f9f9;
+            border: 1px solid #ddd;
+            padding: 15px;
+            border-radius: 5px;
+            text-align: center;
+        }
+        .cta {
+            background: #ffcc00;
+            padding: 20px;
+            text-align: center;
+            border-radius: 5px;
+        }
+        .cta button {
+            padding: 10px 20px;
+            background: #00796b;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            font-size: 1.2rem;
+            cursor: pointer;
+        }
+        .cta button:hover {
+            background: #004d40;
+        }
+        footer {
+            background: #333;
+            color: #ccc;
+            text-align: center;
+            padding: 15px 10px;
+        }
+        footer a {
+            color: #ffcc00;
+            text-decoration: none;
+        }
+        footer a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>Welcome to Explore PH Tours</h1>
+</header>
+
+<nav>
+    <a href="#about">About</a>
+    <a href="#services">Services</a>
+    <a href="#promos">Promos</a>
+    <a href="#branches">Contact Us</a>
+</nav>
+
+<div class="banner">
+    <h2>Discover the Philippines Like Never Before!</h2>
+</div>
+
+<section id="about" class="section">
+    <h2>About Explore PH Tours</h2>
+    <p>Explore PH Tours offers unforgettable travel experiences across the Philippines. With branches in Manila, Cebu, and Davao, we provide seamless travel planning, exciting packages, and professional services to help you discover the beauty of Luzon, Visayas, and Mindanao.</p>
+</section>
+
+<section id="services" class="section">
+    <h2>Our Services</h2>
+    <div class="services">
+        <div>
+            <h3>Island Hopping Tours</h3>
+            <p>Visit pristine beaches and crystal-clear waters on guided island tours.</p>
+        </div>
+        <div>
+            <h3>Guided City Tours</h3>
+            <p>Explore bustling cityscapes with our professional tour guides.</p>
+        </div>
+        <div>
+            <h3>Mountain Trekking</h3>
+            <p>Conquer majestic peaks with our adventurous trekking packages.</p>
+        </div>
+        <div>
+            <h3>Hotel & Transport Reservations</h3>
+            <p>Enjoy hassle-free trips with our reservation services.</p>
+        </div>
+    </div>
+</section>
+
+<section id="promos" class="section">
+    <h2>Special Promotions</h2>
+    <p>Make the most of your travel budget with our exclusive deals:</p>
+    <ul>
+        <li>3+1 Free group packages</li>
+        <li>20% off for bookings made a month in advance</li>
+        <li>Special weekend island-hopping rates in Cebu</li>
+    </ul>
+</section>
+
+<section id="branches" class="section">
+    <h2>Contact Us</h2>
+    <div class="branches">
+        <div>
+            <h3>Manila Branch</h3>
+            <p>Phone: (+63) 123-4567</p>
+        </div>
+        <div>
+            <h3>Cebu Branch</h3>
+            <p>Phone: (+63) 234-5678</p>
+        </div>
+        <div>
+            <h3>Davao Branch</h3>
+            <p>Phone: (+63) 345-6789</p>
+        </div>
+    </div>
+</section>
+
+<section class="cta section">
+    <h2>Book Your Next Adventure Now!</h2>
+    <p>Limited slots available for promo packages. Don't miss out on your dream trip!</p>
+    <button onclick="window.location.href='#branches';">Book Now</button>
+</section>
+
+<footer>
+    <p>Follow us: <a href="#">Facebook</a> | <a href="#">Instagram</a> | <a href="#">Twitter</a></p>
+    <p>&copy; 2025 Explore PH Tours. All Rights Reserved.</p>
+</footer>
+
+</body>
+</html>
