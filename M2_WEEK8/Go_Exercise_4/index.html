@@ -1,24 +1,24 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Random Quote Generator</title>
-  <link rel="stylesheet" href="styles.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WeatherAPI Example</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  <div class="container">
-    <h1>Random Quote Generator</h1>
-    <div id="quoteDisplay">
-      <p id="quote">Click the button to get a random quote!</p>
-      <p id="author"></p>
+    <div class="container">
+        <h1>WeatherAPI Example</h1>
+        <button onclick="callAPI()" class="fetch-button">Fetch Weather Data</button>
+
+        <div class="weather-details">
+            <h2>Weather Details</h2>
+            <p><strong>City:</strong> <span id="weather_city">--</span></p>
+            <p><strong>Temperature:</strong> <span id="weather_temperature">--</span></p>
+            <p><strong>Condition:</strong> <span id="weather_condition">--</span></p>
+        </div>
     </div>
-    <div class="buttons">
-      <button id="newQuoteBtn" class="btn">Get New Quote</button>
-      <button id="copyBtn" class="btn">Copy Quote</button>
-      <button id="shareBtn" class="btn">Share Quote</button>
-    </div>
-  </div>
-  <script src="script.js"></script>
+
+    <script src="script.js"></script>
 </body>
 </html>
