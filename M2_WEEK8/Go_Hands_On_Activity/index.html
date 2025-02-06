@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Random Cocktail Generator</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="container">
+    <h1>Random Cocktail Generator</h1>
+    <div id="cocktailDetails" style="display:none;">
+      <h2 id="cocktailName"></h2>
+      <p><strong>Glass:</strong> <span id="cocktailGlass"></span></p>
+      <p><strong>Instructions:</strong> <span id="cocktailInstructions"></span></p>
+      <h3>Ingredients:</h3>
+      <ul id="cocktailIngredients"></ul>
+    </div>
+    <div class="buttons">
+      <button id="newCocktailBtn" class="btn">Get Random Cocktail</button>
+      <button id="searchBtn" class="btn">Search Cocktail</button>
+      <input type="text" id="searchInput" placeholder="Enter cocktail name...">
+    </div>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,120 @@
+body {
+  font-family: 'Helvetica Neue', sans-serif;
+  text-align: center;
+  margin: 0;
+  background: linear-gradient(135deg, #1c92d2, #f2fcfe); /* New gradient background */
+  color: #333;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.container {
+  width: 80%;
+  max-width: 600px;
+  background-color: #ffffff;
+  padding: 40px;
+  border-radius: 15px;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.container:hover {
+  transform: scale(1.05);
+  box-shadow: 0 30px 80px rgba(0, 0, 0, 0.15);
+}
+
+h1 {
+  color: #1c92d2; /* New heading color */
+  font-size: 2.8em;
+  font-weight: 700;
+  margin-bottom: 30px;
+}
+
+#cocktailDetails {
+  margin-top: 30px;
+  background-color: #f9f9f9;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+}
+
+#cocktailName {
+  font-size: 2.2em;
+  font-weight: 600;
+  color: #333;
+}
+
+#cocktailIngredients {
+  list-style-type: none;
+  padding: 0;
+  margin-top: 15px;
+}
+
+#cocktailIngredients li {
+  font-size: 1.2em;
+  color: #555;
+  margin: 5px 0;
+}
+
+#cocktailIngredients li:before {
+  content: "🍹"; /* Changed emoji for variety */
+  margin-right: 8px;
+}
+
+input[type="text"] {
+  padding: 12px;
+  font-size: 1.2em;
+  border: 2px solid #1c92d2; /* Updated input border color */
+  border-radius: 8px;
+  width: 100%;
+  max-width: 600px;
+  margin: 20px 0;
+  box-sizing: border-box;
+  transition: border-color 0.3s ease;
+}
+
+input[type="text"]:focus {
+  border-color: #ff6f61; /* New focus color */
+  outline: none;
+}
+
+.buttons {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  margin-top: 40px;
+}
+
+button {
+  padding: 14px 30px;
+  font-size: 1.2em;
+  background-color: #1c92d2; /* Button background updated */
+  color: white;
+  border: none;
+  border-radius: 50px;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.3s, box-shadow 0.3s;
+  min-width: 250px;
+}
+
+button:hover {
+  background-color: #ff6f61; /* Hover background updated */
+  transform: translateY(-4px);
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+}
+
+button:active {
+  transform: translateY(2px);
+}
+
+button:focus {
+  outline: none;
+}
+
+button:disabled {
+  background-color: #ccc;
+  cursor: not-allowed;
+}
