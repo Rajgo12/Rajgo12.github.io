@@ -1,40 +1,16 @@
-const quoteElement = document.getElementById('quote');
-const authorElement = document.getElementById('author');
-const newQuoteBtn = document.getElementById('newQuoteBtn');
-const copyBtn = document.getElementById('copyBtn');
-const shareBtn = document.getElementById('shareBtn');
+const apiKey = 'cbb0b276f1724b6fb1420151241811';
+const city = 'London';
 
-function fetchQuote() {
-  fetch('https://dummyjson.com/quotes')
+function callAPI() {
+    const url = `https://api.weatherapi.com/v1/current.json?key=${apiKey}&q=${city}&aqi=no`;
+    fetch(url)
     .then(response => response.json())
     .then(data => {
-      if (data.quotes && data.quotes.length > 0) {
-        const randomIndex = Math.floor(Math.random() * data.quotes.length);
-        const randomQuote = data.quotes[randomIndex];
-        quoteElement.textContent = `"${randomQuote.quote}"`;
-        authorElement.textContent = `- ${randomQuote.author}`;
-      } else {
-        throw new Error('No quotes available');
-      }
+        document.querySelector("#weather_city").textContent = data.location.name || 'N/A';
+        document.querySelector("#weather_temperature").textContent = `${data.current.temp_c}°C` || 'N/A';
+        document.querySelector("#weather_condition").textContent = data.current.condition.text || 'N/A';
     })
     .catch(error => {
-      quoteElement.textContent = 'Failed to load quote. Please try again.';
-      authorElement.textContent = '';
+        console.error("Error fetching weather data:", error);
     });
 }
-
-newQuoteBtn.addEventListener('click', fetchQuote);
-copyBtn.addEventListener('click', () => {
-  navigator.clipboard.writeText(`${quoteElement.textContent} ${authorElement.textContent}`)
-    .then(() => alert('Quote copied to clipboard!'))
-    .catch(err => alert('Failed to copy quote.'));
-});
-shareBtn.addEventListener('click', () => {
-  const quoteText = `${quoteElement.textContent} ${authorElement.textContent}`;
-  const subject = 'Check out this random quote!';
-  const body = encodeURIComponent(quoteText);
-  const mailtoLink = `mailto:?subject=${subject}&body=${body}`;
-  window.location.href = mailtoLink;
-});
-
-fetchQuote();
